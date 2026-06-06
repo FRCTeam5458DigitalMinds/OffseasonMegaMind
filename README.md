@@ -1,5 +1,5 @@
-## Occipital Lobe 2026
+## Megamind 2026
 
-Dev code for 2026 competition robot.
+Offseason Dev code for 2026 season robot.
 
 
