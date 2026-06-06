@@ -1,0 +1,98 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.466034236804564,
+        "y": 7.405520684736091
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.8316444147590913,
+        "y": 7.396045488040802
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.913395149786019,
+        "y": 7.198502139800285
+      },
+      "prevControl": {
+        "x": 3.1318411599250546,
+        "y": 7.565318370275511
+      },
+      "nextControl": {
+        "x": 2.730374863418905,
+        "y": 6.891173058793259
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 3.301554921540655,
+        "y": 6.1245934379457925
+      },
+      "prevControl": {
+        "x": 3.017427920845548,
+        "y": 6.601404170828601
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.9978678038379513,
+      "rotationDegrees": 0.0
+    }
+  ],
+  "constraintZones": [],
+  "pointTowardsZones": [
+    {
+      "fieldPosition": {
+        "x": 4.634,
+        "y": 3.8
+      },
+      "rotationOffset": 0.0,
+      "minWaypointRelativePos": 1.35,
+      "maxWaypointRelativePos": 1.5,
+      "name": "point toward the hub"
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "Prepare shoot",
+      "waypointRelativePos": 0.45,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Prepare shoot"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0.0,
+    "rotation": -60.068
+  },
+  "reversed": false,
+  "folder": "Top Half trench",
+  "idealStartingState": {
+    "velocity": 2.0,
+    "rotation": 0.0
+  },
+  "useDefaultConstraints": true
+}

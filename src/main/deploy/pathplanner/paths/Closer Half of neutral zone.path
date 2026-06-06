@@ -1,0 +1,185 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.414279600570612,
+        "y": 7.392582025677603
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.886729006149992,
+        "y": 7.318980831122358
+      },
+      "isLocked": false,
+      "linkedName": "Top Trench"
+    },
+    {
+      "anchor": {
+        "x": 6.2774465049928665,
+        "y": 7.198502139800285
+      },
+      "prevControl": {
+        "x": 5.904310022438013,
+        "y": 7.624927297844669
+      },
+      "nextControl": {
+        "x": 6.521789781250488,
+        "y": 6.919263509790627
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.497403708987161,
+        "y": 6.305734664764623
+      },
+      "prevControl": {
+        "x": 6.393817567364652,
+        "y": 6.74166659178376
+      },
+      "nextControl": {
+        "x": 6.555199443662746,
+        "y": 6.062507090149183
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.458587731811697,
+        "y": 3.937960057061342
+      },
+      "prevControl": {
+        "x": 7.387452762879063,
+        "y": 3.975366762466005
+      },
+      "nextControl": {
+        "x": 5.394954480549369,
+        "y": 3.8951260452750924
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.186875891583452,
+        "y": 7.030299572039943
+      },
+      "prevControl": {
+        "x": 6.666327046452798,
+        "y": 6.429208977133952
+      },
+      "nextControl": {
+        "x": 5.733369846071922,
+        "y": 7.598862638207287
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.414279600570612,
+        "y": 7.392582025677603
+      },
+      "prevControl": {
+        "x": 4.6516355964906335,
+        "y": 7.3140827823639585
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Top Trench"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 1.8336886993603514,
+      "rotationDegrees": 53.42277184052218
+    },
+    {
+      "waypointRelativePos": 3.070362473347577,
+      "rotationDegrees": -53.077
+    },
+    {
+      "waypointRelativePos": 3.6353944562899643,
+      "rotationDegrees": -53.077
+    },
+    {
+      "waypointRelativePos": 4.424307036247347,
+      "rotationDegrees": 0.0
+    }
+  ],
+  "constraintZones": [
+    {
+      "name": "Constraints Zone",
+      "minWaypointRelativePos": 3.9027683997299283,
+      "maxWaypointRelativePos": 4.172856178257942,
+      "constraints": {
+        "maxVelocity": 3.0,
+        "maxAcceleration": 3.0,
+        "maxAngularVelocity": 540.0,
+        "maxAngularAcceleration": 720.0,
+        "nominalVoltage": 12.0,
+        "unlimited": false
+      }
+    }
+  ],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Deploy Intake",
+      "waypointRelativePos": 0.18906144496960622,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "race",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Deploy Intake"
+              }
+            },
+            {
+              "type": "wait",
+              "data": {
+                "waitTime": 5.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Stop everything",
+      "waypointRelativePos": 3.673193787981088,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Stop everything"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 2.0,
+    "rotation": 0.0
+  },
+  "reversed": false,
+  "folder": "Top Half trench",
+  "idealStartingState": {
+    "velocity": 2.0,
+    "rotation": 0.0
+  },
+  "useDefaultConstraints": true
+}

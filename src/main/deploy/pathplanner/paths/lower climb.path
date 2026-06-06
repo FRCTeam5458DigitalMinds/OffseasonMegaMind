@@ -1,0 +1,66 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.1370756062767473,
+        "y": 4.1191012838801715
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.7483184335533097,
+        "y": 3.582395713988887
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.5677746077032806,
+        "y": 3.239272467902996
+      },
+      "prevControl": {
+        "x": 1.7197116035355735,
+        "y": 3.501175124953935
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Lower climb"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Setup Climb",
+      "waypointRelativePos": 0.16475354490208627,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Setup Climb"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 180.0
+  },
+  "reversed": false,
+  "folder": "Climb",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": 0.0
+  },
+  "useDefaultConstraints": true
+}

@@ -1,0 +1,163 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.414279600570612,
+        "y": 7.392582025677603
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.066630077717846,
+        "y": 7.2533190033952915
+      },
+      "isLocked": false,
+      "linkedName": "Top Trench"
+    },
+    {
+      "anchor": {
+        "x": 6.057489300998572,
+        "y": 7.10793152639087
+      },
+      "prevControl": {
+        "x": 5.610286531319834,
+        "y": 7.311443490496648
+      },
+      "nextControl": {
+        "x": 7.388625647396356,
+        "y": 6.502161189720968
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.90771754636234,
+        "y": 6.253980028530671
+      },
+      "prevControl": {
+        "x": 7.812093262105168,
+        "y": 6.484969197671354
+      },
+      "nextControl": {
+        "x": 8.28334940890095,
+        "y": 5.346607047863852
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.90771754636234,
+        "y": 1.7513266761768898
+      },
+      "prevControl": {
+        "x": 8.108562436750946,
+        "y": 2.083258404158485
+      },
+      "nextControl": {
+        "x": 7.761452777257376,
+        "y": 1.5095982585014238
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 6.251569186875892,
+        "y": 0.7809272467902997
+      },
+      "prevControl": {
+        "x": 6.997590332790367,
+        "y": 1.1562847067585338
+      },
+      "nextControl": {
+        "x": 6.02824411631216,
+        "y": 0.668562159429037
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.504850213980028,
+        "y": 0.706
+      },
+      "prevControl": {
+        "x": 4.907396054706934,
+        "y": 0.7561459105075583
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Bottom Trench"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 2.3134328358208993,
+      "rotationDegrees": 66.21900976054361
+    },
+    {
+      "waypointRelativePos": 2.9530916844349973,
+      "rotationDegrees": 65.56145288706416
+    }
+  ],
+  "constraintZones": [],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "Deploy Intake",
+      "waypointRelativePos": 0.0,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "race",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "Deploy Intake"
+              }
+            },
+            {
+              "type": "wait",
+              "data": {
+                "waitTime": 5.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Stop everything",
+      "waypointRelativePos": 3.8,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Stop everything"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 2.0,
+    "rotation": 0.0
+  },
+  "reversed": false,
+  "folder": "Across Neutral",
+  "idealStartingState": {
+    "velocity": 0.0,
+    "rotation": 0.0
+  },
+  "useDefaultConstraints": true
+}

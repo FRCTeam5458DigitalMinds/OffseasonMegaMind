@@ -1,0 +1,93 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 3.302,
+        "y": 6.125
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.2325504151772595,
+        "y": 6.365159853364273
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 3.302,
+        "y": 7.121
+      },
+      "prevControl": {
+        "x": 3.1096755045879254,
+        "y": 6.913710703677715
+      },
+      "nextControl": {
+        "x": 3.7682903320343972,
+        "y": 7.623572460165291
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.414279600570612,
+        "y": 7.392582025677603
+      },
+      "prevControl": {
+        "x": 4.091593802368664,
+        "y": 7.397035860690365
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "Top Trench"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "pointTowardsZones": [
+    {
+      "fieldPosition": {
+        "x": 4.634,
+        "y": 3.8
+      },
+      "rotationOffset": 0.0,
+      "minWaypointRelativePos": 0.7,
+      "maxWaypointRelativePos": 0.75,
+      "name": "point toward the hub"
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "Prepare shoot",
+      "waypointRelativePos": 0.25,
+      "endWaypointRelativePos": null,
+      "command": {
+        "type": "named",
+        "data": {
+          "name": "Prepare shoot"
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 2.0,
+    "rotation": 0.0
+  },
+  "reversed": false,
+  "folder": "Top Half trench",
+  "idealStartingState": {
+    "velocity": 0.0,
+    "rotation": -60.068
+  },
+  "useDefaultConstraints": true
+}
