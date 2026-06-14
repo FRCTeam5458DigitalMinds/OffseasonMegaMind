@@ -214,9 +214,9 @@ public class RobotContainer {
             m_Feeder.setSpeed(0)
         );
         m_Hood.setDefaultCommand(
-            m_Hood.toSetpoint(0)
-            .andThen(m_Hood.runOnce(() -> {m_Hood.getPosition();}))
-            //m_Hood.runOnce(() -> {m_Hood.getPosition();})
+            /*m_Hood.toSetpoint(0)
+            .andThen(m_Hood.runOnce(() -> {m_Hood.getPosition();}))*/
+            m_Hood.runOnce(() -> {m_Hood.getPosition();})
         );
         m_Indexer.setDefaultCommand(
             m_Indexer.setSpeed(0)
@@ -268,7 +268,7 @@ public class RobotContainer {
         intakeCtrl();
         //sysIDCtrl();
         //climbCtrl();
-        //hoodCtrl();
+        hoodCtrl();
 
         //Manual unjam
         joystick.y().whileTrue(
@@ -337,7 +337,7 @@ public class RobotContainer {
 
     //Hub is active
     public Command hubShoot(){
-        return m_Shooter.PIDtreeRunMotors();
+        return m_Shooter.newPIDtestShoot();
         /*m_Shooter.PIDrunMotors(27.5).withTimeout(0.25)
                 .andThen(m_Shooter.PIDtreeRunMotors());*/
     }

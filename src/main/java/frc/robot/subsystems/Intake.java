@@ -58,7 +58,7 @@ public class Intake extends SubsystemBase {
       intakeMotor.set(-OutputPercent);
     }
 
-    //Used in Comp. research usage - Giovan
+    //Used in Comp. - Giovan
     //Go to certain position based on setpoint index
     public void toSetpoint(int setpointIndex)
     {
@@ -72,7 +72,7 @@ public class Intake extends SubsystemBase {
         intakeMotor.setControl(m_request.withPosition(setpoints[setpointIndex]).withSlot(1));
     }
 
-    //Used in comp,research needed - Giovan
+    //Used in comp - Giovan
     //Go to position not based on a setpoint
     public void customPosition(double setPoint)
     {

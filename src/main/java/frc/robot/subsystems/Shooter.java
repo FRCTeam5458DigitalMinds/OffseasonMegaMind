@@ -32,6 +32,7 @@ import edu.wpi.first.units.VoltageUnit;
 
 import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 import edu.wpi.first.math.interpolation.InterpolatingDoubleTreeMap;
+import edu.wpi.first.math.trajectory.TrapezoidProfile;
 
 
 
@@ -48,6 +49,8 @@ public class Shooter extends SubsystemBase {
     //Calculates the max Revolutions Per Second
     private final double maxRPM = 5500;
 
+
+    TrapezoidProfile m_profile = new TrapezoidProfile(new TrapezoidProfile.Constraints(200,2000));
 
     BangBangController controller = new BangBangController();
 
@@ -249,6 +252,29 @@ public class Shooter extends SubsystemBase {
         }
       );
     }
+
+   public Command newPIDtestShoot(){
+      return run(
+        () -> {
+          newPIDRPS(testRPS);
+        }
+      );
+   }
+
+   //New PID
+   public void newPIDRPS(double RPS){
+      TrapezoidProfile.State m_goal = new TrapezoidProfile.State(RPS, 0);
+      TrapezoidProfile.State m_setpoint = new TrapezoidProfile.State();
+
+      // calculate the next profile setpoint
+      m_setpoint = m_profile.calculate(0.20, m_setpoint, m_goal);
+
+      // send the request to the device
+      // note: "position" is velocity, and "velocity" is acceleration
+      m_request.Velocity = m_setpoint.position;
+      m_request.Acceleration = m_setpoint.velocity;
+      lowerFlyMotor.setControl(m_request);
+   }
 
     //Bang Bang
     public void BBrps(double RPS){

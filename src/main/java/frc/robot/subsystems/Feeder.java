@@ -108,6 +108,7 @@ public class Feeder extends SubsystemBase {
     }
 
     //PID: runs desired RPS
+    //Takes rps from slider, not tree
     public Command PIDtreeRunMotors(){
       return run(
           () -> {
@@ -159,7 +160,8 @@ public class Feeder extends SubsystemBase {
     public void periodic() {
 
       //Sets test RPS
-      testRPS = SmartDashboard.getNumber("Feeder Test RPS", 75.13);
+      testRPS = SmartDashboard.getNumber("Shooter Test RPS", 27.02);
+      //testRPS = SmartDashboard.getNumber("Feeder Test RPS", 75.13);
 
       //Current Feeder RPS
       SmartDashboard.putNumber("Feeder RPS", feedMotor.getVelocity().getValueAsDouble());
