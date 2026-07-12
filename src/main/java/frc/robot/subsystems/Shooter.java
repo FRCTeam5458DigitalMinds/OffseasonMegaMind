@@ -148,7 +148,10 @@ public class Shooter extends SubsystemBase {
       //Default P_value
       SmartDashboard.putNumber("Shooter P_value", Constants.ShooterConstants.p_Value);
 
-      SmartDashboard.putNumber("Multiplier", 0.96);
+      //Default D_value
+      SmartDashboard.putNumber("Shooter D_value", Constants.ShooterConstants.d_Value);
+
+      SmartDashboard.putNumber("Multiplier", 1);
 
 
       //Get kV,kS,kA,kP values
@@ -267,7 +270,9 @@ public class Shooter extends SubsystemBase {
       TrapezoidProfile.State m_setpoint = new TrapezoidProfile.State();
 
       // calculate the next profile setpoint
-      m_setpoint = m_profile.calculate(0.20, m_setpoint, m_goal);
+      m_setpoint = m_profile.calculate(0.20, m_setpoint, m_goal);//0.20
+
+      //double ffVolts = feedforward.calculateWithVelocities(m_setpoint.position,RPS);
 
       // send the request to the device
       // note: "position" is velocity, and "velocity" is acceleration
@@ -306,7 +311,7 @@ public class Shooter extends SubsystemBase {
     SmartDashboard.putNumber("Attempted Shooter RPS", shooterRPS.get(SmartDashboard.getNumber("Pose Distance", 27.02)));
 
     //Multiplier
-    multiplier = SmartDashboard.getNumber("Multiplier", 0.96);
+    multiplier = SmartDashboard.getNumber("Multiplier", 1.0);
 
 
     //Testing RPS from elastic
@@ -315,6 +320,7 @@ public class Shooter extends SubsystemBase {
     //Current RPS
     SmartDashboard.putNumber("Shooter RPS", lowerFlyMotor.getVelocity().getValueAsDouble());
 
+    //Used for P slider
     double newKP = SmartDashboard.getNumber("Shooter P_value", Constants.ShooterConstants.p_Value);
 
     if (newKP != lastKP) {
@@ -335,5 +341,6 @@ public class Shooter extends SubsystemBase {
 
             lastKP = newKP;
     }
+
   }
 }

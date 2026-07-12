@@ -62,7 +62,7 @@ public final class Constants {
 
     public static final int kraken_RPS = 6000/60;
 
-    public static final double p_Value = 0.15; //0.068124
+    public static final double p_Value = 0.10; //0.068124
     public static final double i_Value = 0.0;
     public static final double d_Value = 0.0;
 
