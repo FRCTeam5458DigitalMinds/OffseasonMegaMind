@@ -281,6 +281,16 @@ public class Shooter extends SubsystemBase {
       lowerFlyMotor.setControl(m_request);
    }
 
+   public Command betterPIDmaybeCommand(){
+    return run(() ->{
+      betterPIDmaybe(testRPS);
+    });
+   }
+   //Newest pid from youtube.com/watch?v=vQDL3gmgiwM
+   public void betterPIDmaybe(double RPS){
+    lowerFlyMotor.setControl(m_request.withVelocity(RPS));
+   }
+
     //Bang Bang
     public void BBrps(double RPS){
         lowerFlyMotor.setVoltage(controller.calculate(lowerFlyMotor.getVelocity().getValueAsDouble(), RPS)*12 + 0.9*feedforward.calculate(RPS));

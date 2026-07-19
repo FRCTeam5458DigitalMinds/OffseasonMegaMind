@@ -337,7 +337,7 @@ public class RobotContainer {
 
     //Hub is active
     public Command hubShoot(){
-        return m_Shooter.newPIDtestShoot();
+        return m_Shooter.betterPIDmaybeCommand();
         /*m_Shooter.PIDrunMotors(27.5).withTimeout(0.25)
                 .andThen(m_Shooter.PIDtreeRunMotors());*/
     }
